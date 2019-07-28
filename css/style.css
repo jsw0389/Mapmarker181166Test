@@ -1,0 +1,225 @@
+  html, body {width:100%;height:100%;margin:0;padding:0;}
+  .radius_border{
+    border:1px solid #919191;border-radius:5px;
+  }
+  .mylocation {position:absolute;top:240px;right:3px;width:31px;height:30px;overflow:hidden;z-index:1;background-color:#ffffff;}
+  .mylocation span {display:block;width:31px;height:30px;text-align:center;cursor:pointer;}
+  .mylocation span img {width:31px;height:30px;padding:0px 0;border:none;}
+  .mylocation span:first-child{border-bottom:1px solid #bfbfbf;}
+
+  .menubar{
+    border:none;
+    border:0px;
+    margin:0px;
+    padding:0px;
+    font-size:15px;
+  }
+  .menubar ul{
+    background: rgb(109,109,109);
+    height:30px;
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .menubar li{
+    float:left;
+    padding:0px;
+  }
+  .menubar li a{
+    background: rgb(109,109,109);
+    color:black;
+    display:block;
+    font-weight:normal;
+    line-height:30px;
+    margin:0px;
+    padding:0px 8px;
+    text-align:center;
+    text-decoration:none;
+  }
+  .menubar li a:hover{
+    background: rgb(71,71,71);
+    color:#FFFFFF;
+    text-decoration:none;
+  }
+  .menubar li ul{
+    background: rgb(109,109,109);
+    display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
+    height:auto;
+    padding:0px;
+    margin:0px;
+    border:0px;
+    position:absolute;
+    width:200px;
+    z-index:200;
+    /*top:1em;
+    /*left:0;*/
+  }
+  .menubar li:hover ul{
+    display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
+  }
+  .menubar li li {
+    background: rgb(109,109,109);
+    display:block;
+    float:none;
+    margin:0px;
+    padding:0px;
+    width:200px;
+  }
+  .menubar li:hover li a{
+    background:none;
+  }
+  .menubar li ul a{
+    display: inline-block;
+    color: #cccccc;
+    font-size: inherit;
+    line-height: 2em;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: 0 16px 0 32px;
+  }
+  .menubar li ul a:hover, .menubar li ul li:hover a{
+    color: #FFF;
+  }
+  .menubar p{
+    clear:left;
+  }
+
+
+
+  .searchBox {
+    position: absolute;
+    display: inline-block;
+    padding: 0 0 0 13px;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  .searchBox input, .searchBox button {
+    position: relative;
+    width: 238px;
+    height: 30px;
+    padding: 0;
+    display: inline-block;
+    float: left;
+  }
+  .searchBox input {
+    color: #666;
+    z-index: 2;
+    border: 0 none;
+  }
+  .searchBox input:focus {
+    outline: 0 none;
+  }
+  .searchBox input:focus + .searchBox button {
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+  }
+  .searchBox button {
+    z-index: 1;
+    width: 50px;
+    border: 0 none;
+    background: #ceb980;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+  }
+
+
+
+  .map_wrap {position:relative;overflow:auto;width:100%;height:100%;}
+  .bAddr {padding:5px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+  .customMarkButton {
+    background-color:#ffffff;
+    border-radius:6px;
+    border:1px solid black;
+    display:inline-block;
+    cursor:pointer;
+    color:black;
+    font-family:Arial;
+    font-size:11px;
+    padding:3px 3px;
+    text-decoration:none;
+    text-align: center;
+  }
+  .customMarkButton:hover {
+    background-color:#f6f6f6;
+  }
+  .customMarkButton:active {
+    position:relative;
+    top:1px;
+  }
+
+
+
+  .subMenu label{
+    display: inline-block;
+    color: #cccccc;
+    font-size: inherit;
+    line-height: 2em;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: 0 16px 0 32px;
+  }
+  .subMenu label:hover{
+    color: #FFF;
+  }
+  .subMenu input[type="file"] {
+    /* 파일 필드 숨기기 */
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0;
+  }
+
+
+
+   #mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background-color: #000000;
+    display: none; }
+  .layerpop {
+    display: none;
+    z-index: 1000;
+    border: 2px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+  }
+  .layerpop_area .title {
+    padding: 10px 10px 10px 10px;
+    border: 0px solid #aaaaaa;
+    background: #f1f1f1;
+    color: #3eb0ce;
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 24px;
+  }
+  .layerpop_area .layerpop_close {
+    width: 15px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    text-align: center;
+    color: #3eb0ce;
+    font-weight: bold;
+    border : solid;
+    border-color: #3eb0ce;
+    border-width: thin;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+    background: transparent no-repeat;
+  }
+ .layerpop_area .content {
+    width: 96%;
+    margin: 2%;
+    text-align: center;
+    color: #828282;
+  }

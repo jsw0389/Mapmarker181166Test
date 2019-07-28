@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+  <title>MapMarker-181166</title>
+
+</head>
+
+<body>
+  <div class="menubar">
+    <ul>
+      <li><a href="#" id="current">Menu</a>
+        <ul>
+          <div class="subMenu" id="endHidden">
+            <label for="my_file_input" onclick="fileClass(0)">Load File(Address)</label>
+            <input type="file" id="my_file_input">
+            <label for="my_file_input" onclick="fileClass(1)">Load File(GPS)</label>
+            <input type="file" id="my_file_input">
+          </div>
+          <div class="subMenu" id="chkNotFound" style="display:none">
+            <label for="notFound" onclick="alertNotFound()">검색 실패 항목</label>
+          </div>
+          <li><a href="#" onclick="alertHelp()">Help</a></li>
+        </ul>
+      </li>
+      <div class="searchBox">
+        <input type="text" placeholder="지번 또는 도로명 주소를 입력바랍니다." id="inputAddress" size=30 onkeypress="if( event.keyCode==13 ){searchAddress();}">
+        <button type="submit" onclick="searchAddress()">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </ul>
+  </div>
+  <div class="map_wrap">
+    <div id="map" style="width:100%;height:100%;position:fixed;overflow:auto;"></div>
+
+    <div class="mylocation radius_border">
+      <span onclick="mylocationMarker()"><img src="img/mylocation.png" alt="내 위치"></span>
+    </div>
+  </div>
+  <!--Popup Start -->
+  <div id="mask"></div>
+  <div id="layerbox" class="layerpop" style="width: 430px; height: 430px; overflow:auto;">
+    <article class="layerpop_area">
+      <div class="title" id="alertTitle"></div>
+      <a href="javascript:popupClose();" class="layerpop_close" id="layerbox_close"> X </a> <br>
+      <div class="content">
+        <span id="alertContent"></span>
+      </div>
+    </article>
+  </div>
+</body>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.10.3/xlsx.full.min.js"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b3f736e84d1c8a13b0fc8fd98d6bd62b&libraries=services"></script>
+<script src="js/main.js"></script>
+<script src="js/shawnolson.js"></script>
+
+</html>
