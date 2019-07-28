@@ -146,7 +146,7 @@ function handleFile(e) {
 				var json = XLSX.utils.sheet_to_json(workbook.Sheets[item]);
 				var worksheet = workbook.Sheets[item];
 				var range = XLSX.utils.decode_range(worksheet['!ref']);
-				for (var j = 0; range.e.r+2 >= j; j++) {
+				for (var j = 1; range.e.r+2 >= j; j++) {
 					aColumn[j] = (worksheet["A" + j] ? worksheet["A" + j].v : undefined);
 					bColumn[j] = (worksheet["B" + j] ? worksheet["B" + j].v : undefined);
 					cColumn[j] = (worksheet["C" + j] ? worksheet["C" + j].v : undefined);
@@ -229,7 +229,7 @@ function handleFile(e) {
 					});
 				} else {
 					aColumn.forEach(function(addr, index) {
-            if(addr){
+            if(addr !== null){
               var tempCoords = new kakao.maps.LatLng(bColumn[index], cColumn[index]);
   						var tempContent = '<button type="button" class = "customMarkButton" id="tempId" onclick="closeOverlay(this.id)">' + aColumn[index] + '</button>';
   						//커스텀오버레이 생성
@@ -453,5 +453,4 @@ function mylocationMarker() {
   Version 09 : 커스텀오버레이 배경 투명화 기능 추가
               소스 정리
 	*/
-  //Temp
 	// made by Jeong
