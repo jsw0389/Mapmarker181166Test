@@ -251,6 +251,8 @@ function handleFile(e) {
 		}; //end onload
 		if (rABS) reader.readAsBinaryString(f);
 		else reader.readAsArrayBuffer(f);
+    var tempDiv = document.getElementById('noneBackgroundMenu');
+    tempDiv.style.display = 'block';
 	} //end. for
 }
 
