@@ -229,19 +229,21 @@ function handleFile(e) {
 					});
 				} else {
 					aColumn.forEach(function(addr, index) {
-						var tempCoords = new kakao.maps.LatLng(bColumn[index], cColumn[index]);
-						var tempContent = '<button type="button" class = "customMarkButton" id="tempId" onclick="closeOverlay(this.id)">' + aColumn[index] + '</button>';
-						//커스텀오버레이 생성
-						markOverlay[index] = new daum.maps.CustomOverlay({
-							map: map,
-							clickable: true,
-							position: tempCoords,
-							content: tempContent
-						});
-						bounds.extend(tempCoords);
-						map.setBounds(bounds);
-						//커스텀오버레이 ID 부여
-						document.getElementById("tempId").setAttribute('id', index);
+            if(addr){
+              var tempCoords = new kakao.maps.LatLng(bColumn[index], cColumn[index]);
+  						var tempContent = '<button type="button" class = "customMarkButton" id="tempId" onclick="closeOverlay(this.id)">' + aColumn[index] + '</button>';
+  						//커스텀오버레이 생성
+  						markOverlay[index] = new daum.maps.CustomOverlay({
+  							map: map,
+  							clickable: true,
+  							position: tempCoords,
+  							content: tempContent
+  						});
+  						bounds.extend(tempCoords);
+  						map.setBounds(bounds);
+  						//커스텀오버레이 ID 부여
+  						document.getElementById("tempId").setAttribute('id', index);
+            }
 					});
 					//changecss('.customMarkButton', 'background', 'transparent');
 					changecss('.customMarkButton', 'border-radius', '50%');
