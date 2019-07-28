@@ -219,7 +219,9 @@ function handleFile(e) {
 								}
 							} else {
 								//주소 검색 불가 시 데이터 저장
-								jusoNotFound[notFoundCount++] = aColumn[index];
+                if (aColumn[index]) {
+                  jusoNotFound[notFoundCount++] = aColumn[index];
+                }
 								var tempDiv = document.getElementById('chkNotFound');
 								tempDiv.style.display = 'block';
 							}
