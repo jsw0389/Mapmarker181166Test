@@ -158,7 +158,7 @@ function handleFile(e) {
 						geocoder.addressSearch(addr, function(result, status) {
 							if (status === daum.maps.services.Status.OK) {
 								coords[index] = new daum.maps.LatLng(result[0].y, result[0].x);
-								if (coords[index] != null) {
+								if (coords[index] !== undefined) {
 									if (bColumn[index] == undefined) {bColumn[index] = "V";}
 									var tempContent = '<button type="button" class = "customMarkButton" id="tempId" onclick="closeOverlay(this.id)">' + bColumn[index] + '</button>';
 									//커스텀오버레이 생성
@@ -229,7 +229,7 @@ function handleFile(e) {
 					});
 				} else {
 					aColumn.forEach(function(addr, index) {
-            if(addr !== null){
+            if(addr !== undefined){
               var tempCoords = new kakao.maps.LatLng(bColumn[index], cColumn[index]);
   						var tempContent = '<button type="button" class = "customMarkButton" id="tempId" onclick="closeOverlay(this.id)">' + aColumn[index] + '</button>';
   						//커스텀오버레이 생성
