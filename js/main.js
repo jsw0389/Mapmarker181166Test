@@ -453,5 +453,5 @@ function mylocationMarker() {
   Version 09 : 커스텀오버레이 배경 투명화 기능 추가
               소스 정리
 	*/
-  //temp
+  //temp2
 	// made by Jeong
