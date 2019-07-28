@@ -146,7 +146,7 @@ function handleFile(e) {
 				var json = XLSX.utils.sheet_to_json(workbook.Sheets[item]);
 				var worksheet = workbook.Sheets[item];
 				var range = XLSX.utils.decode_range(worksheet['!ref']);
-				for (var j = 1; range.e.r+2 >= j; j++) {
+				for (var j = 0; range.e.r+2 >= j; j++) {
 					aColumn[j] = (worksheet["A" + j] ? worksheet["A" + j].v : undefined);
 					bColumn[j] = (worksheet["B" + j] ? worksheet["B" + j].v : undefined);
 					cColumn[j] = (worksheet["C" + j] ? worksheet["C" + j].v : undefined);
