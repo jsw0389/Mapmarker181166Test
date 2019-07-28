@@ -282,7 +282,7 @@ function noneBackground() {
     changecss('.customMarkButton', 'background', 'transparent');
     customMarkButtonBackground = 1;
   } else {
-    changecss('.customMarkButton', 'background', 'none');
+    changecss('.customMarkButton', 'background', 'block');
     customMarkButtonBackground = 0;
   }
 }
