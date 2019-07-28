@@ -446,5 +446,9 @@ function mylocationMarker() {
 	Version 07 : 인터페이스 변경 (메뉴화)
 							GPS 주소 파일 검색 기능 추가
 							소스 정리
+  Version 08 : 내위치 기능 추가
+              소스 정리
+  Version 09 : 커스텀오버레이 배경 투명화 기능 추가
+              소스 정리
 	*/
 	// made by Jeong
