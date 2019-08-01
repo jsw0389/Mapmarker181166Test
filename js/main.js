@@ -249,7 +249,7 @@ function handleFile(e) {
 					changecss('.customMarkButton', 'border-radius', '50%');
 					changecss('.customMarkButton', 'width', '25px');
 					changecss('.customMarkButton', 'height', '25px');
-					changecss('.customMarkButton', 'font-weight', 'bold'); 
+					changecss('.customMarkButton', 'font-weight', 'bold');
 				}
 			}); //end. forEach
 		}; //end onload
