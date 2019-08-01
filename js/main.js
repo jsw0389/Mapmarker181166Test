@@ -250,6 +250,7 @@ function handleFile(e) {
 					changecss('.customMarkButton', 'width', '25px');
 					changecss('.customMarkButton', 'height', '25px');
 					changecss('.customMarkButton', 'font-weight', 'bold');
+					changecss('.customMarkButton', 'padding', '0px 0px');
 				}
 			}); //end. forEach
 		}; //end onload
