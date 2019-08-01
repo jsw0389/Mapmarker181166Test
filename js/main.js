@@ -251,7 +251,7 @@ function handleFile(e) {
 					changecss('.customMarkButton', 'height', '20px');
 					changecss('.customMarkButton', 'font-weight', 'bold');
 					changecss('.customMarkButton', 'padding', '0px 0px');
-				}
+				} 
 			}); //end. forEach
 		}; //end onload
 		if (rABS) reader.readAsBinaryString(f);
