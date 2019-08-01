@@ -247,8 +247,8 @@ function handleFile(e) {
 					});
 					//changecss('.customMarkButton', 'background', 'transparent');
 					changecss('.customMarkButton', 'border-radius', '50%');
-					changecss('.customMarkButton', 'width', '25px');
-					changecss('.customMarkButton', 'height', '25px');
+					changecss('.customMarkButton', 'width', '20px');
+					changecss('.customMarkButton', 'height', '20px');
 					changecss('.customMarkButton', 'font-weight', 'bold');
 					changecss('.customMarkButton', 'padding', '0px 0px');
 				}
