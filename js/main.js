@@ -294,29 +294,30 @@ function noneBackground() {
 
 //설명서 표시하는 함수
 function alertHelp() {
-	var alertHelpString =     "-----Address Excel-----"+"<br>";
-			alertHelpString +=    "A열 : 검색 주소 값"+"<br>";
-			alertHelpString +=    "B열 : 표시 값"+"<br>";
-			alertHelpString +=    "C열 : Category2"+"<br>";
-			alertHelpString +=    "ex) : A열 : 영화동 338-1, B열 : 338-1, C열 : 일반주택"+"<br>";
-			alertHelpString +=    "<br>";
-			alertHelpString +=    "-----GPS Excel-----"+"<br>";
-			alertHelpString +=    "A열 : No."+"<br>";
-			alertHelpString +=    "B열 : 위도"+"<br>";
-			alertHelpString +=    "C열 : 경도"+"<br>";
-			alertHelpString +=    "ex) : A열 : 0, B열 : 37.290208, C열 : 127.011734"+"<br>";
-			alertHelpString +=    "<br>";
-			alertHelpString +=    "-----추가 기능-----"+"<br>";
-			alertHelpString +=    "지도 클릭시 위도,경도 자동 복사"+"<br>";
-			alertHelpString +=    "내 위치 및 오차 반경 표시"+"<br>";
-			alertHelpString +=    "-----Category Color-----"+"<br>";
-			alertHelpString +=    "Green : 일반주택, 상가주택"+"<br>";
-			alertHelpString +=    "Gold : 농사용"+"<br>";
-			alertHelpString +=    "Puple : 휴게음식점, 일반음식점"+"<br>";
-			alertHelpString +=    "Red : 노래연습장업, 기타주점, 유흥주점, 단란주점"+"<br>";
-			alertHelpString +=    "Blue : 이동통신 중계기"+"<br>";
-			alertHelpString +=    "Brown : 광업, 하수폐기청소업, 제조업"+"<br>";
-			alertHelpString +=    "Black : Default"+"<br>";
+	var alertHelpString =     "-----Address Excel-----"+"<br>"
+											+			"A열 : 검색 주소 값"+"<br>"
+											+			"B열 : 표시 값"+"<br>"
+											+			"C열 : Category2"+"<br>"
+											+			"ex) : A열 : 영화동 338-1, B열 : 338-1, C열 : 일반주택"+"<br>"
+											+			"<br>"
+											+			"-----GPS Excel-----"+"<br>"
+											+			"A열 : No."+"<br>"
+											+			"B열 : 위도"+"<br>"
+											+			"C열 : 경도"+"<br>"
+											+			"ex) : A열 : 0, B열 : 37.290208, C열 : 127.011734"+"<br>"
+											+			"<br>"
+											+			"-----추가 기능-----"+"<br>"
+											+			"지도 클릭시 위도,경도 자동 복사"+"<br>"
+											+			"내 위치 및 오차 반경 표시"+"<br>"
+											+			"<br>"
+											+			"-----Category Color-----"+"<br>"
+											+			"Green : 일반주택, 상가주택"+"<br>"
+											+			"Gold : 농사용"+"<br>"
+											+			"Puple : 휴게음식점, 일반음식점"+"<br>"
+											+			"Red : 노래연습장업, 기타주점, 유흥주점, 단란주점"+"<br>"
+											+			"Blue : 이동통신 중계기"+"<br>"
+											+			"Brown : 광업, 하수폐기청소업, 제조업"+"<br>"
+											+			"Black : Default"+"<br>";
 	document.getElementById("alertTitle").innerHTML = "사용 설명서";
 	document.getElementById("alertContent").innerHTML = alertHelpString;
 	goDetail()
