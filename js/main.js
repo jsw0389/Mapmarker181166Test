@@ -309,6 +309,14 @@ function alertHelp() {
 			alertHelpString +=    "-----추가 기능-----"+"<br>";
 			alertHelpString +=    "지도 클릭시 위도,경도 자동 복사"+"<br>";
 			alertHelpString +=    "내 위치 및 오차 반경 표시"+"<br>";
+			alertHelpString +=    "-----Category Color-----"+"<br>";
+			alertHelpString +=    "Green:일반주택, 상가주택"+"<br>";
+			alertHelpString +=    "Gold:농사용"+"<br>";
+			alertHelpString +=    "Puple:휴게음식점, 일반음식점"+"<br>";
+			alertHelpString +=    "Red:노래연습장업, 기타주점, 유흥주점, 단란주점"+"<br>";
+			alertHelpString +=    "Blue:이동통신 중계기"+"<br>";
+			alertHelpString +=    "Brown:광업, 하수폐기청소업, 제조업"+"<br>";
+			alertHelpString +=    "Black:Default"+"<br>";
 	document.getElementById("alertTitle").innerHTML = "사용 설명서";
 	document.getElementById("alertContent").innerHTML = alertHelpString;
 	goDetail()
