@@ -462,6 +462,8 @@ function mylocationMarker() {
               소스 정리
   Version 09 : 커스텀오버레이 배경 투명화 기능 추가
               소스 정리
+	Version 10 : GPS 커스텀마크 수정 (100단위 인터페이스 수정)
+	            소스 정리
   // 당분간 안건드림... 귀찮음...
 	*/
 	// made by Jeong
