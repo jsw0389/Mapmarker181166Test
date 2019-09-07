@@ -472,4 +472,3 @@ function mylocationMarker() {
   // 당분간 안건드림... 귀찮음...
 	*/
 	// made by Jeong
- 
