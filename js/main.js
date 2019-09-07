@@ -46,6 +46,7 @@ var marker = new daum.maps.Marker(),
 // 지도를 클릭했을 때 클릭 위치 좌표에 대한 주소정보를 표시하도록 이벤트 등록
 daum.maps.event.addListener(map, 'click', function(mouseEvent) {
 	searchDetailAddrFromCoords(mouseEvent.latLng, function(result, status) {
+		var tempCopyData;
 		if (status === daum.maps.services.Status.OK) {
 			var detailAddr = !!result[0].road_address ? '<div>도로명 : ' + result[0].road_address.address_name + '</div>' : '';
 			detailAddr += '<div>지번 : ' + result[0].address.address_name + '</div>';
@@ -55,6 +56,7 @@ daum.maps.event.addListener(map, 'click', function(mouseEvent) {
 			marker.setMap(map);
 			infowindow.setContent(content);
 			infowindow.open(map, marker);
+			tempCopyData = '지번 : ' + result[0].address.address_name + '\t' + '위도 : ' + mouseEvent.latLng.getLat() + '\u0020' + '경도 : ' + mouseEvent.latLng.getLng();
 		} else {
 			detailAddr += '위도 : ' + mouseEvent.latLng.getLat() + '\u0020' + '경도 : ' + mouseEvent.latLng.getLng();
 			var content = '<div class="bAddr">' + detailAddr + '</div>';
@@ -62,8 +64,9 @@ daum.maps.event.addListener(map, 'click', function(mouseEvent) {
 			marker.setMap(map);
 			infowindow.setContent(content);
 			infowindow.open(map, marker);
+			tempCopyData = '\t' + '위도 : ' + mouseEvent.latLng.getLat() + '\u0020' + '경도 : ' + mouseEvent.latLng.getLng();
 		}
-		copy('위도 : ' + mouseEvent.latLng.getLat() + '\u0020' + '경도 : ' + mouseEvent.latLng.getLng());
+		copy(tempCopyData);
 	});
 });
 // 좌표로 행정동 주소 정보를 요청하는 함수
